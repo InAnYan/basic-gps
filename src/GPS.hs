@@ -16,17 +16,17 @@ gps :: (Operator o g) => [o] -> [g] -> [g] -> Maybe [o]
 gps ops goals state = snd <$> achieveAll goals state
   where
     achieveAll state = foldM achieve (state, [])
+      where
+        achieve (state, acc) goal =
+          if goal `elem` state
+            then Just $ (state, acc)
+            else firstJust tryApply findApplicable
+          where
+            findApplicable = filter (`doesAchieve` goal) ops
 
-    achieve (state, acc) goal =
-      if goal `elem` state
-        then Just $ (state, acc)
-        else firstJust tryApply findApplicable
-
-    findApplicable = filter (`doesAchieve` goal) ops
-
-    tryApply o = do
-      (state', actions) <- achieveAll state $ preconditions o
-      return (state', acc ++ actions ++ [o])
+            tryApply o = do
+              (state', actions) <- achieveAll state $ preconditions o
+              return (state', acc ++ actions ++ [o])
 
 -- It took me some time to make it. It looks very simple, but I've spend
 -- a lot of time looking at different function types.
