@@ -19,7 +19,7 @@ gps ops goals state = snd <$> achieveAll goals state
       where
         achieve (state, acc) goal =
           if goal `elem` state
-            then Just $ (state, acc)
+            then Just (state, acc)
             else firstJust tryApply findApplicable
           where
             findApplicable = filter (`doesAchieve` goal) ops
