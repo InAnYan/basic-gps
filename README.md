@@ -5,5 +5,5 @@ Key features:
 - Abstract. You can have different types for operations and goals.
 
 Warning:
-- It is non tested.
-- It does not fix problems like clobbered sibling problem, or recursive goal problem, etc.
+- It is not tested.
+- It does not fix problems like clobbered sibling problem, or recursive subgoal problem, etc.
