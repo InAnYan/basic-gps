@@ -1,0 +1,21 @@
+cabal-version:      2.4
+name:               basic-gps
+version:            0.1.0.0
+
+synopsis: Basic implementation of General Problem Solver algorithm
+
+description: Basic implementation of General Problem Solver algorithm. Untested, does not fix many problems. Abstract algorithm: you can provide your own type of goals and operations.
+
+license:            MIT
+author:             InAnYan
+maintainer:         ruslanpopov11512@gmail.com
+
+extra-source-files: CHANGELOG.md README.md
+
+library
+    exposed-modules:  GPS
+
+    other-extensions: MultiParamTypeClasses 
+    build-depends:    base ^>=4.17.2.0
+    hs-source-dirs:   src
+    default-language: Haskell2010

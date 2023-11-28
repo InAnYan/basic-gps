@@ -1,0 +1,9 @@
+# Basic implementation of General Problem Solver algorithm
+
+Key features:
+- Written in Haskell in less than 50 LOC.
+- Abstract. You can have different types for operations and goals.
+
+Warning:
+- It is non tested.
+- It does not fix problems like clobbered sibling problem, or recursive goal problem, etc.
