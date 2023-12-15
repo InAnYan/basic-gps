@@ -4,13 +4,17 @@ version:            0.1.0.0
 
 synopsis: Basic implementation of General Problem Solver algorithm
 
-description: Basic implementation of General Problem Solver algorithm. Untested, does not fix many problems. Abstract algorithm: you can provide your own type of goals and operations.
+description: Basic implementation of General Problem Solver algorithm. 
+             Untested, does not fix many problems. 
+             The algorithm is abstract: you can provide your own type of goals and operations.
 
 license:            MIT
 author:             InAnYan
-maintainer:         ruslanpopov11512@gmail.com
+maintainer:         ruslanpopov1512@gmail.com
 
-extra-source-files: CHANGELOG.md README.md
+category: AI
+
+extra-source-files: CHANGELOG.md README.md NOTES.md
 
 library
     exposed-modules:  GPS
